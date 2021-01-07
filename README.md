@@ -2,7 +2,6 @@
 Global Capstone Design (01-09-20 ~ 01-16-20)
 
 ## Topic
-
 Sustainable living in the New Normal
 
 ## Motivation
@@ -18,3 +17,4 @@ So we’ve decided to build a machine that automatically sort out recyclables an
 ## How it works
 
 ## Reference
+https://github.com/pjreddie/darknet
