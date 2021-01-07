@@ -10,7 +10,6 @@ class Object_Detection:
 
     def detect_object(self, img):
         x, y, w, h = -1, -1, -1, -1
-        # img = cv2.resize(img, None, fx=0.4, fy=0.4)
         height, width, _ = img.shape
         class_id = -1
 
