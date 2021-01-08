@@ -1,23 +1,23 @@
 import cv2
 import pyzbar.pyzbar as pyzbar
-import pymysql
+import MySQLdb
 
 
-class Display_Module:
+class QR_DB_Module:
     def __init__(self):
         self.USER = ''
         self.PASSWORD = ''
         self.HOST = ''
         self.DB = ''
-        self.CHARSET = 'utf8'
-        self.my_db = pymysql.connect(
+        self.CHARSET = ''
+        self.my_db = MySQLdb.connect(
             user=self.USER,
             passwd=self.PASSWORD,
             host=self.HOST,
             db=self.DB,
             charset=self.CHARSET
         )
-        self.cursor = self.my_db.cursor(pymysql.cursors.DictCursor)
+        self.cursor = self.my_db.cursor(MySQLdb.cursors.DictCursor)
 
     def get_barcode_info(self):
         cap = cv2.VideoCapture(0)
@@ -51,7 +51,7 @@ class Display_Module:
 
 
 if __name__ == '__main__':
-    dm = Display_Module()
+    dm = QR_DB_Module()
     personal_number = dm.get_barcode_info()
     rw = dm.update_reward(personal_number, '3')
 
