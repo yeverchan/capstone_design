@@ -5,11 +5,11 @@ import MySQLdb
 
 class QR_DB_Module:
     def __init__(self):
-        self.USER = 'root'
-        self.PASSWORD = 'root'
-        self.HOST = 'localhost'
-        self.DB = 'mysql'
-        self.CHARSET = 'utf8'
+        self.USER = ''
+        self.PASSWORD = ''
+        self.HOST = ''
+        self.DB = ''
+        self.CHARSET = ''
         self.my_db = MySQLdb.connect(
             user=self.USER,
             passwd=self.PASSWORD,

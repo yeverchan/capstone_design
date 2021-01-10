@@ -42,8 +42,8 @@ def gstreamer_pipeline(
 
 cap = cv2.VideoCapture(gstreamer_pipeline(sensor_id=0, flip_method=0), cv2.CAP_GSTREAMER)
 
-IP = '192.168.1.164'
-PORT = 9484
+IP = ''
+PORT = 1234
 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
