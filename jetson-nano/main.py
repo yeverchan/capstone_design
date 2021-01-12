@@ -2,10 +2,11 @@ import socket
 import struct
 import cv2
 import numpy as np
+import Jetson.GPIO as GPIO
+import time
 
 #####################################
 from qr_db_module import QR_DB_Module
-from button_module import Button_Module
 from motor_module import Motor_Module
 #####################################
 
@@ -49,6 +50,9 @@ PORT = 1234
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((IP, PORT))
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(15, GPIO.IN)
+
 received_num = b''
 reward = 0
 is_button_clicked = True
@@ -66,6 +70,7 @@ while True:
     data = np.array(frame)
     stringData = data.tostring()
     cur_object = None
+    is_button_clicked = GPIO.input(15)
     
     s.sendall((str(len(stringData))).encode().ljust(16) + stringData)
     received_num = s.recv(10)
@@ -89,6 +94,6 @@ while True:
         personal_number = QD.get_barcode_info()
         if personal_number:
             QD.update_reward(personal_number, str(reward))
-        is_button_clicked = False
         reward = 0
 
+GPIO.cleanp()

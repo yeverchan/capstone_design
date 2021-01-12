@@ -9,7 +9,7 @@ class QR_DB_Module:
         self.PASSWORD = ''
         self.HOST = ''
         self.DB = ''
-        self.CHARSET = ''
+        self.CHARSET = 'utf8'
         self.my_db = MySQLdb.connect(
             user=self.USER,
             passwd=self.PASSWORD,
