@@ -13,6 +13,8 @@ Global Capstone Design (01-09-20 ~ 01-16-20)
 
 ## System design
 
+![](./images/system_design.png)
+
 ## How it works
 
 ## Reference
