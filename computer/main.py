@@ -25,7 +25,6 @@ class Recycling:
         self.OD = Object_Detection()
         self.connection = None
         self.start_socket()
-        self.cnt = 0
 
     def start_socket(self):
         IP = ''
