@@ -5,15 +5,20 @@ Global Capstone Design (01-09-20 ~ 01-16-20)
 + Sustainable living in the New Normal
 
 ## Motivation
-+ COVID-19 impacts on the recycling industry. Nowadays, a number of people order delivery food more than before due to the corona-virus.
-
-+ It is an important thing that people should recycle better for sustainable living.
-
-+ So we’ve decided to build a machine that automatically sorts out recyclables and then gives rewards to people.
++ The idea behind is that The Recycling industry is impacted by COVID-19.
++ After corona virus is broken out, it has become pandemic over the world.
++ The number of people, nowadays, order delivery food more than before due to lockdown and social distance. The percentages of recycling items which are possibly recycled dropped from 60% to 40%.
++ This result is serious problem for our environment. So It is essential to recycle better.
 
 ## System design
 
+![](./images/system_design.png)
+
 ## How it works
+1. Put any recycling items in the machine.
+2. Wait until the machine detect whether it can be recycled or not..
+3. If the item is available to recycle, it will fell down in the trash bin.
+4. Get the reward depends on how many you put and which object you put.
 
 ## Reference
 + https://github.com/pjreddie/darknet
